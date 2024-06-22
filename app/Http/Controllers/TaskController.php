@@ -14,7 +14,7 @@ class TaskController extends Controller
     public function index(): View
     {
         return view('tasks.index', [
-            'tasks' => Task::with('user')->latest()->get()->paginate(10),
+            'tasks' => Task::with('user')->latest()->paginate(10),
         ]);
     }
 
