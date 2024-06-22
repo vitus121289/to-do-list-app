@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('task', TaskController::class)
+Route::resource('tasks', TaskController::class)
     ->only('index', 'create')
     ->middleware('auth');
 
